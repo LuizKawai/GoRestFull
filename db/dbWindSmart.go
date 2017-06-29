@@ -354,7 +354,7 @@ func InsertEmployee(usr NewEmployee) {
 
 	defer db.Close()
 
-	res := mustExec(db, "INSERT INTO user (dni, firstname, lastname, address, birthdate, age, gender, personal_email, phone_number, hire_date, enterprice_email, password,  is_active, is_admin, idjobposition, idschedule)  VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", usr.dni, usr.firstname, usr.lastname, usr.address, usr.birthdate, usr.age, usr.gender, usr.personal_email, usr.phone_number, usr.hire_date, usr.enterprice_email, usr.password, user.is_active, usr.id_admin, usr.idjobposition, usr.idschedule)
+	res := mustExec(db, "INSERT INTO user (dni, firstname, lastname, address, birthdate, age, gender, personal_email, phone_number, hire_date, enterprice_email, password,  is_active, is_admin, idjobposition, idschedule)  VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", usr.dni, usr.firstname, usr.lastname, usr.address, usr.birthdate, usr.age, usr.gender, usr.personal_email, usr.phone_number, usr.hire_date, usr.enterprice_email, usr.password, usr.is_active, usr.is_admin, usr.idjobposition, usr.idschedule)
 	count, err := res.RowsAffected()
 	if err != nil {
 		log.Printf("res.RowsAffected() returned error: %s", err.Error())
