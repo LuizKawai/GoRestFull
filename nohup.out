@@ -1,0 +1,473 @@
+2017/06/26 07:28:25 Routes sharing a common placeholder MUST name it consistently: dni != enterprice_email
+2017/06/26 07:37:22 Routes sharing a common placeholder MUST name it consistently: dni != enterprice_email
+2017/06/26 07:46:31 Routes sharing a common placeholder MUST name it consistently: dni != enterprice_email
+2017/06/26 07:47:40 Routes sharing a common placeholder MUST name it consistently: dni != enterprice_email
+2017/06/26 07:48:19 Routes sharing a common placeholder MUST name it consistently: dni != enterprice_email
+2017/06/26 07:53:00 Routes sharing a common placeholder MUST name it consistently: dni != enterprice_email
+2017/06/26 07:57:33 Routes sharing a common placeholder MUST name it consistently: dni != enterprice_email
+2017/06/26 07:59:45 Routes sharing a common placeholder MUST name it consistently: dni != enterprice_email
+select u.dni, u.firstname, u.lastname, u.age, u.address, u.personal_email, u.phone_number, u.enterprice_email,  u.is_active, s.turn, j.name, a.name, d.name from user u join jobposition j on j.idjobposition = u.idjobposition join schedule s on s.idschedule = u.idschedule join area a on j.idarea=a.idarea join department d on d.iddepartment = a.iddepartment;
+Error 1130: Host 'ip-172-31-14-242.us-east-2.compute.internal' is not allowed to connect to this MySQL server
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/recover.go:41 (0x470973)
+	(*RecoverMiddleware).MiddlewareFunc.func1.1: trace := debug.Stack()
+/usr/local/go/src/runtime/asm_amd64.s:437 (0x45a57e)
+	call32: CALLFN(·call32, 32)
+/usr/local/go/src/runtime/panic.go:423 (0x42b039)
+	gopanic: reflectcall(nil, unsafe.Pointer(d.fn), deferArgs(d), uint32(d.siz), uint32(d.siz))
+/home/ec2-user/GoRestFull/db/dbWindSmart.go:30 (0x45e004)
+	EmployeesRequest: panic(err.Error()) // proper error handling instead of panic in your app
+/home/ec2-user/GoRestFull/api.go:48 (0x401c1c)
+	Employees_Handler: employees := datos.EmployeesRequest()
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/router.go:56 (0x470d51)
+	(*router).AppFunc.func1: handler(writer, request)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/content_type_checker.go:38 (0x470059)
+	(*ContentTypeCheckerMiddleware).MiddlewareFunc.func1: handler(w, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/json_indent.go:35 (0x4703c8)
+	(*JsonIndentMiddleware).MiddlewareFunc.func1: handler(writer, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/recover.go:57 (0x470c31)
+	(*RecoverMiddleware).MiddlewareFunc.func1: h(w, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/powered_by.go:26 (0x4706b7)
+	(*PoweredByMiddleware).MiddlewareFunc.func1: h(w, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/recorder.go:22 (0x47078c)
+	(*RecorderMiddleware).MiddlewareFunc.func1: h(writer, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/timer.go:20 (0x470ea7)
+	(*TimerMiddleware).MiddlewareFunc.func1: h(w, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/access_log_apache.go:88 (0x46f925)
+	(*AccessLogApacheMiddleware).MiddlewareFunc.func1: h(w, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/middleware.go:70 (0x470572)
+	adapterFunc.func1: handler(writer, request)
+/usr/local/go/src/net/http/server.go:1422 (0x48b58a)
+	HandlerFunc.ServeHTTP: f(w, r)
+/usr/local/go/src/net/http/server.go:1862 (0x48d7fe)
+	serverHandler.ServeHTTP: handler.ServeHTTP(rw, req)
+/usr/local/go/src/net/http/server.go:1361 (0x48b04e)
+	(*conn).serve: serverHandler{c.server}.ServeHTTP(w, w.req)
+/usr/local/go/src/runtime/asm_amd64.s:1696 (0x45c8a1)
+	goexit: BYTE	$0x90	// NOP
+28/Jun/2017:01:58:27 +0000 [0;31m500[0m [36;1m10401μs[0m "GET /employees HTTP/1.1" [1;30m- "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"[0m
+28/Jun/2017:01:58:28 +0000 [1;33m404[0m [36;1m53μs[0m "GET /favicon.ico HTTP/1.1" [1;30m- "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"[0m
+select u.dni, u.firstname, u.lastname, u.age, u.address, u.personal_email, u.phone_number, u.enterprice_email,  u.is_active, s.turn, j.name, a.name, d.name from user u join jobposition j on j.idjobposition = u.idjobposition join schedule s on s.idschedule = u.idschedule join area a on j.idarea=a.idarea join department d on d.iddepartment = a.iddepartment;
+Error 1130: Host 'ip-172-31-14-242.us-east-2.compute.internal' is not allowed to connect to this MySQL server
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/recover.go:41 (0x470973)
+	(*RecoverMiddleware).MiddlewareFunc.func1.1: trace := debug.Stack()
+/usr/local/go/src/runtime/asm_amd64.s:437 (0x45a57e)
+	call32: CALLFN(·call32, 32)
+/usr/local/go/src/runtime/panic.go:423 (0x42b039)
+	gopanic: reflectcall(nil, unsafe.Pointer(d.fn), deferArgs(d), uint32(d.siz), uint32(d.siz))
+/home/ec2-user/GoRestFull/db/dbWindSmart.go:30 (0x45e004)
+	EmployeesRequest: panic(err.Error()) // proper error handling instead of panic in your app
+/home/ec2-user/GoRestFull/api.go:48 (0x401c1c)
+	Employees_Handler: employees := datos.EmployeesRequest()
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/router.go:56 (0x470d51)
+	(*router).AppFunc.func1: handler(writer, request)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/content_type_checker.go:38 (0x470059)
+	(*ContentTypeCheckerMiddleware).MiddlewareFunc.func1: handler(w, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/json_indent.go:35 (0x4703c8)
+	(*JsonIndentMiddleware).MiddlewareFunc.func1: handler(writer, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/recover.go:57 (0x470c31)
+	(*RecoverMiddleware).MiddlewareFunc.func1: h(w, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/powered_by.go:26 (0x4706b7)
+	(*PoweredByMiddleware).MiddlewareFunc.func1: h(w, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/recorder.go:22 (0x47078c)
+	(*RecorderMiddleware).MiddlewareFunc.func1: h(writer, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/timer.go:20 (0x470ea7)
+	(*TimerMiddleware).MiddlewareFunc.func1: h(w, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/access_log_apache.go:88 (0x46f925)
+	(*AccessLogApacheMiddleware).MiddlewareFunc.func1: h(w, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/middleware.go:70 (0x470572)
+	adapterFunc.func1: handler(writer, request)
+/usr/local/go/src/net/http/server.go:1422 (0x48b58a)
+	HandlerFunc.ServeHTTP: f(w, r)
+/usr/local/go/src/net/http/server.go:1862 (0x48d7fe)
+	serverHandler.ServeHTTP: handler.ServeHTTP(rw, req)
+/usr/local/go/src/net/http/server.go:1361 (0x48b04e)
+	(*conn).serve: serverHandler{c.server}.ServeHTTP(w, w.req)
+/usr/local/go/src/runtime/asm_amd64.s:1696 (0x45c8a1)
+	goexit: BYTE	$0x90	// NOP
+28/Jun/2017:02:00:27 +0000 [0;31m500[0m [36;1m4006μs[0m "GET /employees HTTP/1.1" [1;30m- "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"[0m
+select u.dni, u.firstname, u.lastname, u.age, u.address, u.personal_email, u.phone_number, u.enterprice_email,  u.is_active, s.turn, j.name, a.name, d.name from user u join jobposition j on j.idjobposition = u.idjobposition join schedule s on s.idschedule = u.idschedule join area a on j.idarea=a.idarea join department d on d.iddepartment = a.iddepartment;
+Error 1130: Host 'ip-172-31-14-242.us-east-2.compute.internal' is not allowed to connect to this MySQL server
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/recover.go:41 (0x470973)
+	(*RecoverMiddleware).MiddlewareFunc.func1.1: trace := debug.Stack()
+/usr/local/go/src/runtime/asm_amd64.s:437 (0x45a57e)
+	call32: CALLFN(·call32, 32)
+/usr/local/go/src/runtime/panic.go:423 (0x42b039)
+	gopanic: reflectcall(nil, unsafe.Pointer(d.fn), deferArgs(d), uint32(d.siz), uint32(d.siz))
+/home/ec2-user/GoRestFull/db/dbWindSmart.go:30 (0x45e004)
+	EmployeesRequest: panic(err.Error()) // proper error handling instead of panic in your app
+/home/ec2-user/GoRestFull/api.go:48 (0x401c1c)
+	Employees_Handler: employees := datos.EmployeesRequest()
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/router.go:56 (0x470d51)
+	(*router).AppFunc.func1: handler(writer, request)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/content_type_checker.go:38 (0x470059)
+	(*ContentTypeCheckerMiddleware).MiddlewareFunc.func1: handler(w, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/json_indent.go:35 (0x4703c8)
+	(*JsonIndentMiddleware).MiddlewareFunc.func1: handler(writer, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/recover.go:57 (0x470c31)
+	(*RecoverMiddleware).MiddlewareFunc.func1: h(w, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/powered_by.go:26 (0x4706b7)
+	(*PoweredByMiddleware).MiddlewareFunc.func1: h(w, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/recorder.go:22 (0x47078c)
+	(*RecorderMiddleware).MiddlewareFunc.func1: h(writer, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/timer.go:20 (0x470ea7)
+	(*TimerMiddleware).MiddlewareFunc.func1: h(w, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/access_log_apache.go:88 (0x46f925)
+	(*AccessLogApacheMiddleware).MiddlewareFunc.func1: h(w, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/middleware.go:70 (0x470572)
+	adapterFunc.func1: handler(writer, request)
+/usr/local/go/src/net/http/server.go:1422 (0x48b58a)
+	HandlerFunc.ServeHTTP: f(w, r)
+/usr/local/go/src/net/http/server.go:1862 (0x48d7fe)
+	serverHandler.ServeHTTP: handler.ServeHTTP(rw, req)
+/usr/local/go/src/net/http/server.go:1361 (0x48b04e)
+	(*conn).serve: serverHandler{c.server}.ServeHTTP(w, w.req)
+/usr/local/go/src/runtime/asm_amd64.s:1696 (0x45c8a1)
+	goexit: BYTE	$0x90	// NOP
+28/Jun/2017:02:27:18 +0000 [0;31m500[0m [36;1m4503μs[0m "GET /employees HTTP/1.1" [1;30m- "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"[0m
+select u.dni, u.firstname, u.lastname, u.age, u.address, u.personal_email, u.phone_number, u.enterprice_email,  u.is_active, s.turn, j.name, a.name, d.name from user u join jobposition j on j.idjobposition = u.idjobposition join schedule s on s.idschedule = u.idschedule join area a on j.idarea=a.idarea join department d on d.iddepartment = a.iddepartment;
+Error 1130: Host 'ip-172-31-14-242.us-east-2.compute.internal' is not allowed to connect to this MySQL server
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/recover.go:41 (0x470973)
+	(*RecoverMiddleware).MiddlewareFunc.func1.1: trace := debug.Stack()
+/usr/local/go/src/runtime/asm_amd64.s:437 (0x45a57e)
+	call32: CALLFN(·call32, 32)
+/usr/local/go/src/runtime/panic.go:423 (0x42b039)
+	gopanic: reflectcall(nil, unsafe.Pointer(d.fn), deferArgs(d), uint32(d.siz), uint32(d.siz))
+/home/ec2-user/GoRestFull/db/dbWindSmart.go:30 (0x45e004)
+	EmployeesRequest: panic(err.Error()) // proper error handling instead of panic in your app
+/home/ec2-user/GoRestFull/api.go:48 (0x401c1c)
+	Employees_Handler: employees := datos.EmployeesRequest()
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/router.go:56 (0x470d51)
+	(*router).AppFunc.func1: handler(writer, request)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/content_type_checker.go:38 (0x470059)
+	(*ContentTypeCheckerMiddleware).MiddlewareFunc.func1: handler(w, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/json_indent.go:35 (0x4703c8)
+	(*JsonIndentMiddleware).MiddlewareFunc.func1: handler(writer, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/recover.go:57 (0x470c31)
+	(*RecoverMiddleware).MiddlewareFunc.func1: h(w, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/powered_by.go:26 (0x4706b7)
+	(*PoweredByMiddleware).MiddlewareFunc.func1: h(w, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/recorder.go:22 (0x47078c)
+	(*RecorderMiddleware).MiddlewareFunc.func1: h(writer, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/timer.go:20 (0x470ea7)
+	(*TimerMiddleware).MiddlewareFunc.func1: h(w, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/access_log_apache.go:88 (0x46f925)
+	(*AccessLogApacheMiddleware).MiddlewareFunc.func1: h(w, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/middleware.go:70 (0x470572)
+	adapterFunc.func1: handler(writer, request)
+/usr/local/go/src/net/http/server.go:1422 (0x48b58a)
+	HandlerFunc.ServeHTTP: f(w, r)
+/usr/local/go/src/net/http/server.go:1862 (0x48d7fe)
+	serverHandler.ServeHTTP: handler.ServeHTTP(rw, req)
+/usr/local/go/src/net/http/server.go:1361 (0x48b04e)
+	(*conn).serve: serverHandler{c.server}.ServeHTTP(w, w.req)
+/usr/local/go/src/runtime/asm_amd64.s:1696 (0x45c8a1)
+	goexit: BYTE	$0x90	// NOP
+28/Jun/2017:02:27:23 +0000 [0;31m500[0m [36;1m2894μs[0m "GET /employees HTTP/1.1" [1;30m- "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"[0m
+select u.dni, u.firstname, u.lastname, u.age, u.address, u.personal_email, u.phone_number, u.enterprice_email,  u.is_active, s.turn, j.name, a.name, d.name from user u join jobposition j on j.idjobposition = u.idjobposition join schedule s on s.idschedule = u.idschedule join area a on j.idarea=a.idarea join department d on d.iddepartment = a.iddepartment;
+Error 1130: Host 'ip-172-31-14-242.us-east-2.compute.internal' is not allowed to connect to this MySQL server
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/recover.go:41 (0x470973)
+	(*RecoverMiddleware).MiddlewareFunc.func1.1: trace := debug.Stack()
+/usr/local/go/src/runtime/asm_amd64.s:437 (0x45a57e)
+	call32: CALLFN(·call32, 32)
+/usr/local/go/src/runtime/panic.go:423 (0x42b039)
+	gopanic: reflectcall(nil, unsafe.Pointer(d.fn), deferArgs(d), uint32(d.siz), uint32(d.siz))
+/home/ec2-user/GoRestFull/db/dbWindSmart.go:30 (0x45e004)
+	EmployeesRequest: panic(err.Error()) // proper error handling instead of panic in your app
+/home/ec2-user/GoRestFull/api.go:48 (0x401c1c)
+	Employees_Handler: employees := datos.EmployeesRequest()
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/router.go:56 (0x470d51)
+	(*router).AppFunc.func1: handler(writer, request)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/content_type_checker.go:38 (0x470059)
+	(*ContentTypeCheckerMiddleware).MiddlewareFunc.func1: handler(w, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/json_indent.go:35 (0x4703c8)
+	(*JsonIndentMiddleware).MiddlewareFunc.func1: handler(writer, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/recover.go:57 (0x470c31)
+	(*RecoverMiddleware).MiddlewareFunc.func1: h(w, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/powered_by.go:26 (0x4706b7)
+	(*PoweredByMiddleware).MiddlewareFunc.func1: h(w, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/recorder.go:22 (0x47078c)
+	(*RecorderMiddleware).MiddlewareFunc.func1: h(writer, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/timer.go:20 (0x470ea7)
+	(*TimerMiddleware).MiddlewareFunc.func1: h(w, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/access_log_apache.go:88 (0x46f925)
+	(*AccessLogApacheMiddleware).MiddlewareFunc.func1: h(w, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/middleware.go:70 (0x470572)
+	adapterFunc.func1: handler(writer, request)
+/usr/local/go/src/net/http/server.go:1422 (0x48b58a)
+	HandlerFunc.ServeHTTP: f(w, r)
+/usr/local/go/src/net/http/server.go:1862 (0x48d7fe)
+	serverHandler.ServeHTTP: handler.ServeHTTP(rw, req)
+/usr/local/go/src/net/http/server.go:1361 (0x48b04e)
+	(*conn).serve: serverHandler{c.server}.ServeHTTP(w, w.req)
+/usr/local/go/src/runtime/asm_amd64.s:1696 (0x45c8a1)
+	goexit: BYTE	$0x90	// NOP
+28/Jun/2017:02:56:09 +0000 [0;31m500[0m [36;1m4913μs[0m "GET /employees HTTP/1.1" [1;30m- "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"[0m
+select u.dni, u.firstname, u.lastname, u.age, u.address, u.personal_email, u.phone_number, u.enterprice_email,  u.is_active, s.turn, j.name, a.name, d.name from user u join jobposition j on j.idjobposition = u.idjobposition join schedule s on s.idschedule = u.idschedule join area a on j.idarea=a.idarea join department d on d.iddepartment = a.iddepartment;
+Error 1130: Host 'ip-172-31-14-242.us-east-2.compute.internal' is not allowed to connect to this MySQL server
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/recover.go:41 (0x470973)
+	(*RecoverMiddleware).MiddlewareFunc.func1.1: trace := debug.Stack()
+/usr/local/go/src/runtime/asm_amd64.s:437 (0x45a57e)
+	call32: CALLFN(·call32, 32)
+/usr/local/go/src/runtime/panic.go:423 (0x42b039)
+	gopanic: reflectcall(nil, unsafe.Pointer(d.fn), deferArgs(d), uint32(d.siz), uint32(d.siz))
+/home/ec2-user/GoRestFull/db/dbWindSmart.go:30 (0x45e004)
+	EmployeesRequest: panic(err.Error()) // proper error handling instead of panic in your app
+/home/ec2-user/GoRestFull/api.go:48 (0x401c1c)
+	Employees_Handler: employees := datos.EmployeesRequest()
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/router.go:56 (0x470d51)
+	(*router).AppFunc.func1: handler(writer, request)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/content_type_checker.go:38 (0x470059)
+	(*ContentTypeCheckerMiddleware).MiddlewareFunc.func1: handler(w, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/json_indent.go:35 (0x4703c8)
+	(*JsonIndentMiddleware).MiddlewareFunc.func1: handler(writer, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/recover.go:57 (0x470c31)
+	(*RecoverMiddleware).MiddlewareFunc.func1: h(w, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/powered_by.go:26 (0x4706b7)
+	(*PoweredByMiddleware).MiddlewareFunc.func1: h(w, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/recorder.go:22 (0x47078c)
+	(*RecorderMiddleware).MiddlewareFunc.func1: h(writer, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/timer.go:20 (0x470ea7)
+	(*TimerMiddleware).MiddlewareFunc.func1: h(w, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/access_log_apache.go:88 (0x46f925)
+	(*AccessLogApacheMiddleware).MiddlewareFunc.func1: h(w, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/middleware.go:70 (0x470572)
+	adapterFunc.func1: handler(writer, request)
+/usr/local/go/src/net/http/server.go:1422 (0x48b58a)
+	HandlerFunc.ServeHTTP: f(w, r)
+/usr/local/go/src/net/http/server.go:1862 (0x48d7fe)
+	serverHandler.ServeHTTP: handler.ServeHTTP(rw, req)
+/usr/local/go/src/net/http/server.go:1361 (0x48b04e)
+	(*conn).serve: serverHandler{c.server}.ServeHTTP(w, w.req)
+/usr/local/go/src/runtime/asm_amd64.s:1696 (0x45c8a1)
+	goexit: BYTE	$0x90	// NOP
+28/Jun/2017:02:56:16 +0000 [0;31m500[0m [36;1m2522μs[0m "GET /employees HTTP/1.1" [1;30m- "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"[0m
+select u.dni, u.firstname, u.lastname, u.age, u.address, u.personal_email, u.phone_number, u.enterprice_email,  u.is_active, s.turn, j.name, a.name, d.name from user u join jobposition j on j.idjobposition = u.idjobposition join schedule s on s.idschedule = u.idschedule join area a on j.idarea=a.idarea join department d on d.iddepartment = a.iddepartment;
+Error 1045: Access denied for user 'roo'@'localhost' (using password: YES)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/recover.go:41 (0x470973)
+	(*RecoverMiddleware).MiddlewareFunc.func1.1: trace := debug.Stack()
+/usr/local/go/src/runtime/asm_amd64.s:437 (0x45a57e)
+	call32: CALLFN(·call32, 32)
+/usr/local/go/src/runtime/panic.go:423 (0x42b039)
+	gopanic: reflectcall(nil, unsafe.Pointer(d.fn), deferArgs(d), uint32(d.siz), uint32(d.siz))
+/home/ec2-user/GoRestFull/db/dbWindSmart.go:30 (0x45e004)
+	EmployeesRequest: panic(err.Error()) // proper error handling instead of panic in your app
+/home/ec2-user/GoRestFull/api.go:48 (0x401c1c)
+	Employees_Handler: employees := datos.EmployeesRequest()
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/router.go:56 (0x470d51)
+	(*router).AppFunc.func1: handler(writer, request)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/content_type_checker.go:38 (0x470059)
+	(*ContentTypeCheckerMiddleware).MiddlewareFunc.func1: handler(w, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/json_indent.go:35 (0x4703c8)
+	(*JsonIndentMiddleware).MiddlewareFunc.func1: handler(writer, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/recover.go:57 (0x470c31)
+	(*RecoverMiddleware).MiddlewareFunc.func1: h(w, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/powered_by.go:26 (0x4706b7)
+	(*PoweredByMiddleware).MiddlewareFunc.func1: h(w, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/recorder.go:22 (0x47078c)
+	(*RecorderMiddleware).MiddlewareFunc.func1: h(writer, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/timer.go:20 (0x470ea7)
+	(*TimerMiddleware).MiddlewareFunc.func1: h(w, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/access_log_apache.go:88 (0x46f925)
+	(*AccessLogApacheMiddleware).MiddlewareFunc.func1: h(w, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/middleware.go:70 (0x470572)
+	adapterFunc.func1: handler(writer, request)
+/usr/local/go/src/net/http/server.go:1422 (0x48b58a)
+	HandlerFunc.ServeHTTP: f(w, r)
+/usr/local/go/src/net/http/server.go:1862 (0x48d7fe)
+	serverHandler.ServeHTTP: handler.ServeHTTP(rw, req)
+/usr/local/go/src/net/http/server.go:1361 (0x48b04e)
+	(*conn).serve: serverHandler{c.server}.ServeHTTP(w, w.req)
+/usr/local/go/src/runtime/asm_amd64.s:1696 (0x45c8a1)
+	goexit: BYTE	$0x90	// NOP
+28/Jun/2017:03:00:35 +0000 [0;31m500[0m [36;1m1874μs[0m "GET /employees HTTP/1.1" [1;30m- "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"[0m
+select u.dni, u.firstname, u.lastname, u.age, u.address, u.personal_email, u.phone_number, u.enterprice_email,  u.is_active, s.turn, j.name, a.name, d.name from user u join jobposition j on j.idjobposition = u.idjobposition join schedule s on s.idschedule = u.idschedule join area a on j.idarea=a.idarea join department d on d.iddepartment = a.iddepartment;
+28/Jun/2017:03:04:26 +0000 [0;32m200[0m [36;1m1102μs[0m "GET /employees HTTP/1.1" [1;30m- "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"[0m
+select u.dni, u.firstname, u.lastname, u.age, u.address, u.personal_email, u.phone_number, u.enterprice_email,  u.is_active, s.turn, j.name, a.name, d.name from user u join jobposition j on j.idjobposition = u.idjobposition join schedule s on s.idschedule = u.idschedule join area a on j.idarea=a.idarea join department d on d.iddepartment = a.iddepartment;
+28/Jun/2017:03:05:09 +0000 [0;32m200[0m [36;1m906μs[0m "GET /employees HTTP/1.1" [1;30m- "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"[0m
+28/Jun/2017:21:36:49 +0000 [1;33m404[0m [36;1m83μs[0m "GET /employee HTTP/1.1" [1;30m- "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"[0m
+select u.dni, u.firstname, u.lastname, u.age, u.address, u.personal_email, u.phone_number, u.enterprice_email,  u.is_active, s.turn, j.name, a.name, d.name from user u join jobposition j on j.idjobposition = u.idjobposition join schedule s on s.idschedule = u.idschedule join area a on j.idarea=a.idarea join department d on d.iddepartment = a.iddepartment;
+28/Jun/2017:21:36:53 +0000 [0;32m200[0m [36;1m4088μs[0m "GET /employees HTTP/1.1" [1;30m- "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"[0m
+28/Jun/2017:21:54:29 +0000 [0;32m200[0m [36;1m78μs[0m "GET /employees HTTP/1.1" [1;30m- "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"[0m
+28/Jun/2017:21:54:29 +0000 [1;33m404[0m [36;1m52μs[0m "GET /favicon.ico HTTP/1.1" [1;30m- "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"[0m
+28/Jun/2017:22:03:44 +0000 [0;32m200[0m [36;1m54μs[0m "GET /employees HTTP/1.1" [1;30m- "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"[0m
+select u.dni, u.firstname, u.lastname, u.age, u.address, u.personal_email, u.phone_number, u.enterprice_email,  u.is_active, s.turn, j.name, a.name, d.name from user u join jobposition j on j.idjobposition = u.idjobposition join schedule s on s.idschedule = u.idschedule join area a on j.idarea=a.idarea join department d on d.iddepartment = a.iddepartment;
+28/Jun/2017:22:07:12 +0000 [0;32m200[0m [36;1m3823μs[0m "GET /employees HTTP/1.1" [1;30m- "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"[0m
+select u.dni from user u;
+28/Jun/2017:22:30:27 +0000 [0;32m200[0m [36;1m3357μs[0m "GET /employees HTTP/1.1" [1;30m- "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"[0m
+select u.dni from user u;
+28/Jun/2017:22:30:29 +0000 [0;32m200[0m [36;1m1411μs[0m "GET /employees HTTP/1.1" [1;30m- "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"[0m
+select u.dni from user u;
+28/Jun/2017:22:49:07 +0000 [0;32m200[0m [36;1m17477μs[0m "GET /employees HTTP/1.1" [1;30m- "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"[0m
+select u.dni from user u;
+28/Jun/2017:22:50:25 +0000 [0;32m200[0m [36;1m3190μs[0m "GET /employees HTTP/1.1" [1;30m- "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"[0m
+select u.dni from user u;
+28/Jun/2017:23:05:43 +0000 [0;32m200[0m [36;1m904μs[0m "GET /employees HTTP/1.1" [1;30m- "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"[0m
+select u.dni from user u;
+Error 1045: Access denied for user ''@'localhost' (using password: NO)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/recover.go:41 (0x470523)
+	(*RecoverMiddleware).MiddlewareFunc.func1.1: trace := debug.Stack()
+/usr/local/go/src/runtime/asm_amd64.s:437 (0x45a57e)
+	call32: CALLFN(·call32, 32)
+/usr/local/go/src/runtime/panic.go:423 (0x42b039)
+	gopanic: reflectcall(nil, unsafe.Pointer(d.fn), deferArgs(d), uint32(d.siz), uint32(d.siz))
+/home/ec2-user/GoRestFull/db/dbWindSmart.go:32 (0x45dffb)
+	EmployeesRequest: panic(err.Error()) // proper error handling instead of panic in your app
+/home/ec2-user/GoRestFull/api.go:48 (0x401c1c)
+	Employees_Handler: employees := datos.EmployeesRequest()
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/router.go:56 (0x470901)
+	(*router).AppFunc.func1: handler(writer, request)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/content_type_checker.go:38 (0x46fc09)
+	(*ContentTypeCheckerMiddleware).MiddlewareFunc.func1: handler(w, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/json_indent.go:35 (0x46ff78)
+	(*JsonIndentMiddleware).MiddlewareFunc.func1: handler(writer, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/recover.go:57 (0x4707e1)
+	(*RecoverMiddleware).MiddlewareFunc.func1: h(w, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/powered_by.go:26 (0x470267)
+	(*PoweredByMiddleware).MiddlewareFunc.func1: h(w, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/recorder.go:22 (0x47033c)
+	(*RecorderMiddleware).MiddlewareFunc.func1: h(writer, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/timer.go:20 (0x470a57)
+	(*TimerMiddleware).MiddlewareFunc.func1: h(w, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/access_log_apache.go:88 (0x46f4d5)
+	(*AccessLogApacheMiddleware).MiddlewareFunc.func1: h(w, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/middleware.go:70 (0x470122)
+	adapterFunc.func1: handler(writer, request)
+/usr/local/go/src/net/http/server.go:1422 (0x48b13a)
+	HandlerFunc.ServeHTTP: f(w, r)
+/usr/local/go/src/net/http/server.go:1862 (0x48d3ae)
+	serverHandler.ServeHTTP: handler.ServeHTTP(rw, req)
+/usr/local/go/src/net/http/server.go:1361 (0x48abfe)
+	(*conn).serve: serverHandler{c.server}.ServeHTTP(w, w.req)
+/usr/local/go/src/runtime/asm_amd64.s:1696 (0x45c8a1)
+	goexit: BYTE	$0x90	// NOP
+28/Jun/2017:23:09:54 +0000 [0;31m500[0m [36;1m1791μs[0m "GET /employees HTTP/1.1" [1;30m- "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"[0m
+select iddepartment, name, description from department
+Error 1045: Access denied for user ''@'localhost' (using password: NO)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/recover.go:41 (0x470523)
+	(*RecoverMiddleware).MiddlewareFunc.func1.1: trace := debug.Stack()
+/usr/local/go/src/runtime/asm_amd64.s:437 (0x45a57e)
+	call32: CALLFN(·call32, 32)
+/usr/local/go/src/runtime/panic.go:423 (0x42b039)
+	gopanic: reflectcall(nil, unsafe.Pointer(d.fn), deferArgs(d), uint32(d.siz), uint32(d.siz))
+/home/ec2-user/GoRestFull/db/dbWindSmart.go:244 (0x463528)
+	DepartmentRequest: panic(err.Error()) // proper error handling instead of panic in your app
+/home/ec2-user/GoRestFull/api.go:100 (0x40260c)
+	Department_handler: departments := datos.DepartmentRequest()
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/router.go:56 (0x470901)
+	(*router).AppFunc.func1: handler(writer, request)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/content_type_checker.go:38 (0x46fc09)
+	(*ContentTypeCheckerMiddleware).MiddlewareFunc.func1: handler(w, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/json_indent.go:35 (0x46ff78)
+	(*JsonIndentMiddleware).MiddlewareFunc.func1: handler(writer, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/recover.go:57 (0x4707e1)
+	(*RecoverMiddleware).MiddlewareFunc.func1: h(w, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/powered_by.go:26 (0x470267)
+	(*PoweredByMiddleware).MiddlewareFunc.func1: h(w, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/recorder.go:22 (0x47033c)
+	(*RecorderMiddleware).MiddlewareFunc.func1: h(writer, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/timer.go:20 (0x470a57)
+	(*TimerMiddleware).MiddlewareFunc.func1: h(w, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/access_log_apache.go:88 (0x46f4d5)
+	(*AccessLogApacheMiddleware).MiddlewareFunc.func1: h(w, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/middleware.go:70 (0x470122)
+	adapterFunc.func1: handler(writer, request)
+/usr/local/go/src/net/http/server.go:1422 (0x48b13a)
+	HandlerFunc.ServeHTTP: f(w, r)
+/usr/local/go/src/net/http/server.go:1862 (0x48d3ae)
+	serverHandler.ServeHTTP: handler.ServeHTTP(rw, req)
+/usr/local/go/src/net/http/server.go:1361 (0x48abfe)
+	(*conn).serve: serverHandler{c.server}.ServeHTTP(w, w.req)
+/usr/local/go/src/runtime/asm_amd64.s:1696 (0x45c8a1)
+	goexit: BYTE	$0x90	// NOP
+28/Jun/2017:23:10:45 +0000 [0;31m500[0m [36;1m1721μs[0m "GET /departments HTTP/1.1" [1;30m- "Mozilla/5.0 (Linux; Android 4.4.2; HTC Desire 526G Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.83 Mobile Safari/537.36"[0m
+select iddepartment, name, description from department
+Error 1045: Access denied for user ''@'localhost' (using password: NO)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/recover.go:41 (0x470523)
+	(*RecoverMiddleware).MiddlewareFunc.func1.1: trace := debug.Stack()
+/usr/local/go/src/runtime/asm_amd64.s:437 (0x45a57e)
+	call32: CALLFN(·call32, 32)
+/usr/local/go/src/runtime/panic.go:423 (0x42b039)
+	gopanic: reflectcall(nil, unsafe.Pointer(d.fn), deferArgs(d), uint32(d.siz), uint32(d.siz))
+/home/ec2-user/GoRestFull/db/dbWindSmart.go:244 (0x463528)
+	DepartmentRequest: panic(err.Error()) // proper error handling instead of panic in your app
+/home/ec2-user/GoRestFull/api.go:100 (0x40260c)
+	Department_handler: departments := datos.DepartmentRequest()
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/router.go:56 (0x470901)
+	(*router).AppFunc.func1: handler(writer, request)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/content_type_checker.go:38 (0x46fc09)
+	(*ContentTypeCheckerMiddleware).MiddlewareFunc.func1: handler(w, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/json_indent.go:35 (0x46ff78)
+	(*JsonIndentMiddleware).MiddlewareFunc.func1: handler(writer, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/recover.go:57 (0x4707e1)
+	(*RecoverMiddleware).MiddlewareFunc.func1: h(w, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/powered_by.go:26 (0x470267)
+	(*PoweredByMiddleware).MiddlewareFunc.func1: h(w, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/recorder.go:22 (0x47033c)
+	(*RecorderMiddleware).MiddlewareFunc.func1: h(writer, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/timer.go:20 (0x470a57)
+	(*TimerMiddleware).MiddlewareFunc.func1: h(w, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/access_log_apache.go:88 (0x46f4d5)
+	(*AccessLogApacheMiddleware).MiddlewareFunc.func1: h(w, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/middleware.go:70 (0x470122)
+	adapterFunc.func1: handler(writer, request)
+/usr/local/go/src/net/http/server.go:1422 (0x48b13a)
+	HandlerFunc.ServeHTTP: f(w, r)
+/usr/local/go/src/net/http/server.go:1862 (0x48d3ae)
+	serverHandler.ServeHTTP: handler.ServeHTTP(rw, req)
+/usr/local/go/src/net/http/server.go:1361 (0x48abfe)
+	(*conn).serve: serverHandler{c.server}.ServeHTTP(w, w.req)
+/usr/local/go/src/runtime/asm_amd64.s:1696 (0x45c8a1)
+	goexit: BYTE	$0x90	// NOP
+28/Jun/2017:23:10:45 +0000 [0;31m500[0m [36;1m1799μs[0m "GET /departments HTTP/1.1" [1;30m- "Mozilla/5.0 (Linux; Android 4.4.2; HTC Desire 526G Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.83 Mobile Safari/537.36"[0m
+28/Jun/2017:23:10:46 +0000 [1;33m404[0m [36;1m74μs[0m "GET /favicon.ico HTTP/1.1" [1;30m- "Mozilla/5.0 (Linux; Android 4.4.2; HTC Desire 526G Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.83 Mobile Safari/537.36"[0m
+28/Jun/2017:23:11:10 +0000 [1;33m404[0m [36;1m38μs[0m "GET /department HTTP/1.1" [1;30m- "Mozilla/5.0 (Linux; Android 4.4.2; HTC Desire 526G Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.83 Mobile Safari/537.36"[0m
+select u.dni from user u;
+28/Jun/2017:23:21:02 +0000 [0;32m200[0m [36;1m3417μs[0m "GET /employees HTTP/1.1" [1;30m- "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"[0m
+select u.dni from user u;
+28/Jun/2017:23:36:23 +0000 [0;32m200[0m [36;1m2841μs[0m "GET /employees HTTP/1.1" [1;30m- "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"[0m
+select u.dni, u.firstname, u.lastname, u.age, u.address, u.personal_email, u.phone_number, u.enterprice_email, u.is_active, j.name, s.turn, a.name, d.name from user u join jobposition j on j.idjobposition = u.idjobposition join schedule s on s.idschedule = u.idschedule join area a on j.idarea=a.idarea join department d on d.iddepartment = a.iddepartment where u.dni = ?
+28/Jun/2017:23:40:39 +0000 [0;32m200[0m [36;1m3106μs[0m "GET /employee/dni/47432501 HTTP/1.1" [1;30m- "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"[0m
+28/Jun/2017:23:40:44 +0000 [1;33m404[0m [36;1m71μs[0m "GET /employee/dni/ HTTP/1.1" [1;30m- "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"[0m
+2017/06/29 00:49:18 listen tcp :9988: bind: address already in use
+select u.dni from user u;
+29/Jun/2017:00:53:53 +0000 [0;32m200[0m [36;1m3040μs[0m "GET /employees HTTP/1.1" [1;30m- "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36"[0m
+29/Jun/2017:00:53:53 +0000 [1;33m404[0m [36;1m97μs[0m "GET /favicon.ico HTTP/1.1" [1;30m- "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36"[0m
+select iddepartment, name, description from department
+sql: Scan error on column index 1: converting string "Marketing" to a int: strconv.ParseInt: parsing "Marketing": invalid syntax
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/recover.go:41 (0x470523)
+	(*RecoverMiddleware).MiddlewareFunc.func1.1: trace := debug.Stack()
+/usr/local/go/src/runtime/asm_amd64.s:437 (0x45a57e)
+	call32: CALLFN(·call32, 32)
+/usr/local/go/src/runtime/panic.go:423 (0x42b039)
+	gopanic: reflectcall(nil, unsafe.Pointer(d.fn), deferArgs(d), uint32(d.siz), uint32(d.siz))
+/home/ec2-user/GoRestFull/db/dbWindSmart.go:252 (0x463770)
+	DepartmentRequest: panic(err1.Error())
+/home/ec2-user/GoRestFull/api.go:100 (0x40260c)
+	Department_handler: departments := datos.DepartmentRequest()
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/router.go:56 (0x470901)
+	(*router).AppFunc.func1: handler(writer, request)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/content_type_checker.go:38 (0x46fc09)
+	(*ContentTypeCheckerMiddleware).MiddlewareFunc.func1: handler(w, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/json_indent.go:35 (0x46ff78)
+	(*JsonIndentMiddleware).MiddlewareFunc.func1: handler(writer, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/recover.go:57 (0x4707e1)
+	(*RecoverMiddleware).MiddlewareFunc.func1: h(w, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/powered_by.go:26 (0x470267)
+	(*PoweredByMiddleware).MiddlewareFunc.func1: h(w, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/recorder.go:22 (0x47033c)
+	(*RecorderMiddleware).MiddlewareFunc.func1: h(writer, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/timer.go:20 (0x470a57)
+	(*TimerMiddleware).MiddlewareFunc.func1: h(w, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/access_log_apache.go:88 (0x46f4d5)
+	(*AccessLogApacheMiddleware).MiddlewareFunc.func1: h(w, r)
+/home/ec2-user/go/src/github.com/ant0ine/go-json-rest/rest/middleware.go:70 (0x470122)
+	adapterFunc.func1: handler(writer, request)
+/usr/local/go/src/net/http/server.go:1422 (0x48b13a)
+	HandlerFunc.ServeHTTP: f(w, r)
+/usr/local/go/src/net/http/server.go:1862 (0x48d3ae)
+	serverHandler.ServeHTTP: handler.ServeHTTP(rw, req)
+/usr/local/go/src/net/http/server.go:1361 (0x48abfe)
+	(*conn).serve: serverHandler{c.server}.ServeHTTP(w, w.req)
+/usr/local/go/src/runtime/asm_amd64.s:1696 (0x45c8a1)
+	goexit: BYTE	$0x90	// NOP
+29/Jun/2017:01:14:34 +0000 [0;31m500[0m [36;1m4744μs[0m "GET /departments HTTP/1.1" [1;30m- "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36"[0m

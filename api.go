@@ -15,7 +15,7 @@ func main() {
 	router, err := rest.MakeRouter(
 		// ----  WindSmart Get Request ---
 		///////////////////////////////////////////////////////////////////////////////////////////////////////
-		&rest.Route{"GET", "/employees", Employees_Handler},
+		&rest.Route{"GET", "/employees", Employees_handler},
 		&rest.Route{"GET", "/employee/:dni", Employee_Dni_handler},
 		&rest.Route{"GET", "/employee/:enterprice_email/:password", Admin_handler},
 		///////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -44,7 +44,7 @@ func main() {
 
 // ----  WindSmart ---
 //////////////////////////////////////////////////////////////////////////////////////////
-func Employees_Handler(w rest.ResponseWriter, r *rest.Request) {
+func Employees_handler(w rest.ResponseWriter, r *rest.Request) {
 	employees := datos.EmployeesRequest()
 	w.WriteJson(employees)
 }
