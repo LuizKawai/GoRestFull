@@ -6,13 +6,13 @@ package mysqldb
 
 type Department struct{
 	iddepartment int
-	name int
+	name string
 	description string
 }
 
 type Area struct{
 	idarea int
-	name int
+	name string
 	description string
 	iddepartment int
 }
